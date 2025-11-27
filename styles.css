@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: red;
+    background-color: rgb(95, 68, 68);
 
     
 }
@@ -12,20 +12,24 @@
 
 
 .circle1, .circle2, .circle3{
-    border-radius: 25%;
+    
     background-color: white;
-    margin: 20px;
+    transform: rotate(45deg);   /* ✅ correct */
+    margin: 40px;
     width: 100px;
     height: 100px;
     opacity: 0.6;
+    rotate: 90deg;
     animation: pulse infinite alternate 1s;
 }
 @keyframes pulse{
     from  {
+        transform: rotate(45deg);
        background-color: rgb(134, 128, 128);;
     }
     to{
-        background-color: rgb(241, 241, 241);
+        background-color: rgb(246, 110, 110);
+        transform: rotate(-45deg);
         height: 150px;
         width: 150px;
     }
