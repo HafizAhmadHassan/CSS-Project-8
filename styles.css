@@ -1,77 +1,32 @@
 
-.card{
+.contianer{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 100vh;
-    background-color: black;
-}
+    background-color: red;
 
-
-
-
-.card-thumbnail {
-    margin-left: 180px;
-}
-
-.card-thumbnail img{
-    max-width: 70%;
-
-}
-.card-body {
-    margin-top: 20px;
-
-}
-.card-avatar img{
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-    border-radius: 2px;
-}
-
-.card-body {
-    display: flex;
-    flex-direction: row;
     
 }
 
-.card-details{
-    line-height: 1.5;
-    
+
+
+.circle1, .circle2, .circle3{
+    border-radius: 25%;
+    background-color: white;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    animation: pulse infinite alternate 1s;
 }
-
-.card-details h3{
-    font-weight: 900;
-    font-size: 1rem;
-}
-
-.card-details p {
-    font-size: 0.9rem;
-    color: gray;
-}
-
-
-
-h3, p{
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: sans-serif;
-}
-
-
-.card-stat ul{
-    display: flex;
-    flex-direction: row;
-}
-.card-stat ul:hover{
-    list-style: none;
-    margin-right: 20px;
-    color: gray;
-    font-size: 0.9rem;
-}
-.card-stat ul li{
-   margin-right: 20px;
+@keyframes pulse{
+    from  {
+       background-color: rgb(134, 128, 128);;
+    }
+    to{
+        background-color: rgb(241, 241, 241);
+        height: 150px;
+        width: 150px;
+    }
 }
