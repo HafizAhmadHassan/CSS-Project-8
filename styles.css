@@ -12,32 +12,51 @@
 
 
 .circle1, .circle2, .circle3 {
-    background-color: white;
     margin: 20px;
     width: 100px;
     height: 100px;
-    opacity: 0.6;
-    animation: pulse 1s infinite alternate, spin 3s linear infinite;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: pulse 2s infinite alternate,
+               spin 5s linear infinite;
 }
 
-/* Pulse animation (grow/shrink + color change) */
+/* Pulse animation (same for all) */
 @keyframes pulse {
-    from {
-        background-color: rgb(134, 128, 128);
-        transform: scale(1);
-    }
-    to {
-        background-color: rgb(241, 241, 241);
-        transform: scale(1.5);
-    }
+    from { transform: scale(1); }
+    to   { transform: scale(1.5); }
 }
 
-/* Continuous rotation */
+/* Continuous rotation (same for all) */
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Color cycling */
+@keyframes colorShift {
+    0%   { background-color: red; }
+    25%  { background-color: orange; }
+    50%  { background-color: yellow; }
+    75%  { background-color: green; }
+    100% { background-color: blue; }
+}
+
+/* Different speeds for each circle */
+.circle1 {
+    animation: pulse 2s infinite alternate,
+               spin 5s linear infinite,
+               colorShift 4s linear infinite;
+}
+
+.circle2 {
+    animation: pulse 2s infinite alternate,
+               spin 5s linear infinite,
+               colorShift 6s linear infinite;
+}
+
+.circle3 {
+    animation: pulse 2s infinite alternate,
+               spin 5s linear infinite,
+               colorShift 8s linear infinite;
 }
