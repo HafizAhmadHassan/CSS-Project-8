@@ -1,5 +1,5 @@
 
-.contianer{
+.contianer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,16 +11,35 @@
 
 
 
-.circle1, .circle2, .circle3 {
+.circle1, .circle2, .circle3, .circle4 {
     margin: 20px;
-    width: 100px;
-    height: 100px;
+    position: absolute;
     border-radius: 50%;
     opacity: 0.8;
     animation: pulse 2s infinite alternate,
                spin 5s linear infinite;
 }
 
+.circle1 {
+    width: 100px;
+    height: 100px;
+    color: rgb(191, 255, 0);
+}
+.circle2 {
+    width: 150px;
+    height: 150px;
+    color: rgb(255, 0, 0);
+}
+.circle3 {
+    width: 200px;
+    height: 200px;
+    color: rgb(38, 0, 255);
+}
+.circle4 {
+    width: 250px;
+    height: 250px;
+    color: rgb(56, 163, 156);
+}
 /* Pulse animation (same for all) */
 @keyframes pulse {
     from { transform: scale(1); }
