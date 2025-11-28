@@ -79,3 +79,8 @@
                spin 5s linear infinite,
                colorShift 8s linear infinite;
 }
+.circle4 {
+    animation: pulse 2s infinite alternate,
+               spin 5s linear infinite,
+               colorShift 10s linear infinite;
+}
